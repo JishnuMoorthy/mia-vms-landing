@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Bash(done)",
+      "Bash(python3 -c \":*)",
+      "Bash(brew install:*)",
+      "Bash(gh auth:*)",
+      "Bash(sudo chown:*)",
+      "Bash(mkdir -p /Users/jishnunarasimhamoorthy/.claude/gh)",
+      "Bash(GH_CONFIG_DIR=/Users/jishnunarasimhamoorthy/.claude/gh gh auth login --git-protocol ssh --hostname github.com -w)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(GH_CONFIG_DIR=/Users/jishnunarasimhamoorthy/.claude/gh gh repo create mia-vms-landing --public --source=. --remote=origin --push)",
+      "Bash(GH_CONFIG_DIR=/Users/jishnunarasimhamoorthy/.claude/gh gh api repos/JishnuMoorthy/mia-vms-landing/pages --method POST -f source='{\"\"branch\"\":\"\"main\"\",\"\"path\"\":\"\"/\"\"}')",
+      "Bash(GH_CONFIG_DIR=/Users/jishnunarasimhamoorthy/.claude/gh gh api repos/JishnuMoorthy/mia-vms-landing/pages --method POST --field 'source[branch]=main' --field 'source[path]=/')",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(python3 -c \"from PIL import Image; print\\(''Pillow available''\\)\")",
+      "Bash(python3:*)"
+    ]
+  }
+}
