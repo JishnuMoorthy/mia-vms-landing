@@ -113,10 +113,20 @@ section { padding: 56px 0; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* ═══════════════════════════════════════
+   URGENCY BANNER
+   ═══════════════════════════════════════ */
+.urgency-banner {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 110;
+  background: var(--organic); text-align: center;
+  padding: 8px 16px; font-size: 0.78rem; font-weight: 400;
+  color: var(--organic-pale); letter-spacing: 0.2px;
+}
+
+/* ═══════════════════════════════════════
    NAV
    ═══════════════════════════════════════ */
 nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  position: fixed; top: 33px; left: 0; right: 0; z-index: 100;
   background: rgba(237,230,214,0.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
@@ -138,8 +148,8 @@ nav {
 /* ═══════════════════════════════════════
    HERO
    ═══════════════════════════════════════ */
-.hero { padding: 100px 0 48px; text-align: center; }
-@media(max-width: 480px) { .hero { padding: 88px 0 36px; } }
+.hero { padding: 132px 0 48px; text-align: center; }
+@media(max-width: 480px) { .hero { padding: 120px 0 36px; } }
 .hero h1 { margin-bottom: 16px; }
 .hero p.sub {
   font-size: 0.92rem; font-weight: 300; color: var(--muted);
@@ -147,6 +157,21 @@ nav {
 }
 .hero .fine-print {
   margin-top: 14px; font-size: 0.82rem; color: var(--muted); font-weight: 300;
+}
+.btn-whatsapp {
+  background: #25D366; color: #fff; font-size: 1rem; font-weight: 500;
+  padding: 16px 32px; width: 100%; max-width: 400px; justify-content: center;
+}
+.btn-whatsapp:hover { background: #1EB854; }
+.hero .secondary-link {
+  display: inline-block; margin-top: 16px; font-size: 0.85rem;
+  color: var(--muted); text-decoration: none; font-weight: 400;
+  transition: color 0.2s;
+}
+.hero .secondary-link:hover { color: var(--accent); }
+.social-proof {
+  margin-top: 20px; font-size: 0.78rem; color: var(--muted);
+  font-weight: 300; line-height: 1.5;
 }
 
 /* ═══════════════════════════════════════
@@ -156,6 +181,18 @@ nav {
   background: var(--ivory-warm); padding: 52px 0 44px; overflow: hidden;
 }
 @media(max-width: 480px) { .showcase-section { padding: 40px 0 36px; } }
+@media(max-width: 768px) {
+  .showcase-tabs { display: none !important; }
+  .showcase-dots { display: none !important; }
+  .screenshot-slide { display: none !important; }
+  .screenshot-slide[data-slide="0"] { display: flex !important; }
+  .showcase-mobile-link {
+    display: block; text-align: center; margin-top: 16px;
+    font-size: 0.85rem; color: var(--accent); text-decoration: none;
+    font-weight: 400;
+  }
+}
+@media(min-width: 769px) { .showcase-mobile-link { display: none; } }
 .showcase-section .section-label { color: var(--natural); text-align: center; }
 .showcase-section h2 { color: var(--ink); text-align: center; margin-bottom: 32px; padding: 0 20px; }
 
@@ -456,6 +493,9 @@ footer .copy { font-size: 0.7rem; color: var(--muted); margin-top: 20px; opacity
 </head>
 <body>
 
+<!-- ════════ URGENCY BANNER ════════ -->
+<div class="urgency-banner">Only 6 spots remaining in our free trial cohort &mdash; first come, first served.</div>
+
 <!-- ════════ NAV ════════ -->
 <nav>
   <div class="nav-inner">
@@ -469,9 +509,9 @@ footer .copy { font-size: 0.7rem; color: var(--muted); margin-top: 20px; opacity
       </svg>
       <span>Mia VMS</span>
     </a>
-    <button class="nav-cta" onclick="openModal()">Join trial
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C+I%27m+interested+in+the+Mia+VMS+free+trial.+Clinic%3A+%5BClinic+Name%5D%2C+%5BCity%5D" class="nav-cta" target="_blank" rel="noopener" style="text-decoration:none;">Join trial
       <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </button>
+    </a>
   </div>
 </nav>
 
@@ -479,12 +519,11 @@ footer .copy { font-size: 0.7rem; color: var(--muted); margin-top: 20px; opacity
 <section class="hero">
   <div class="container">
     <div class="reveal">
-      <h1>Run your clinic,<br><span class="italic accent">not your paperwork.</span></h1>
-      <p class="sub">Appointments, patient records, billing, inventory, and analytics &mdash; one platform that handles the busywork so you can focus on what you do best: treating animals.</p>
-      <button class="btn" onclick="openModal()">Apply for the free trial
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </button>
-      <p class="fine-print">2-week free trial &middot; No commitment</p>
+      <h1>Still running your clinic on<br><span class="italic accent">paper registers and WhatsApp?</span></h1>
+      <p class="sub">Mia gives Indian vets one place for appointments, patient records, billing, and inventory &mdash; built for clinics like yours, not for US hospital chains.</p>
+      <a href="https://wa.me/91XXXXXXXXXX?text=Hi%2C+I%27m+interested+in+the+Mia+VMS+free+trial.+Clinic%3A+%5BClinic+Name%5D%2C+%5BCity%5D" class="btn btn-whatsapp" target="_blank" rel="noopener">&#x1F4AC;&ensp;Claim Your Free Trial on WhatsApp</a>
+      <a href="#features" class="secondary-link">&rarr; See what's inside the product</a>
+      <p class="social-proof">&#x1F43E;&ensp;Vets from Delhi &middot; Coimbatore &middot; Ahmedabad &middot; Pune &middot; Hyderabad have already joined the trial.</p>
     </div>
   </div>
 </section>
@@ -572,6 +611,7 @@ footer .copy { font-size: 0.7rem; color: var(--muted); margin-top: 20px; opacity
       <button class="showcase-dot" data-index="5"></button>
       <button class="showcase-dot" data-index="6"></button>
     </div>
+    <a href="#features" class="showcase-mobile-link">&rarr; See all 7 modules</a>
   </div>
 </section>
 
@@ -659,7 +699,7 @@ footer .copy { font-size: 0.7rem; color: var(--muted); margin-top: 20px; opacity
     <div class="reveal">
       <p class="section-label">Early access</p>
       <h2>Be one of the first 10 clinics<br>to use <span class="italic" style="color:var(--apricot);">Mia.</span></h2>
-      <p class="body-text">Mia is in active development, with AI-powered features on the roadmap. We're looking for real clinics to trial it and tell us what's missing. No polish &mdash; just a working product and a team that's building the future of veterinary care.</p>
+      <p class="body-text">Mia is in active development, with AI-powered features on the roadmap. We're onboarding the first 10 clinics personally &mdash; one-on-one setup, direct access to the team, and your feedback shapes what gets built next. This is not a form submission into a void.</p>
     </div>
     <ul class="perk-list reveal">
       <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Personal demo and unrestricted access to every module for 2 weeks</li>
@@ -847,12 +887,15 @@ function goToSlide(index) {
 tabs.forEach(tab => tab.addEventListener('click', () => goToSlide(+tab.dataset.index)));
 dots.forEach(dot => dot.addEventListener('click', () => goToSlide(+dot.dataset.index)));
 
-// Auto-cycle every 5s, pause on interaction
-let autoTimer = setInterval(() => {
-  const current = document.querySelector('.screenshot-slide.active');
-  const idx = +current.dataset.slide;
-  goToSlide((idx + 1) % slides.length);
-}, 5000);
+// Auto-cycle every 5s, pause on interaction — skip on mobile
+let autoTimer = null;
+if (window.innerWidth > 768) {
+  autoTimer = setInterval(() => {
+    const current = document.querySelector('.screenshot-slide.active');
+    const idx = +current.dataset.slide;
+    goToSlide((idx + 1) % slides.length);
+  }, 5000);
+}
 
 function pauseAuto() { clearInterval(autoTimer); }
 document.querySelector('.showcase-section').addEventListener('click', pauseAuto);
