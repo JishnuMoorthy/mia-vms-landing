@@ -252,23 +252,24 @@ nav {
 /* ═══════════════════════════════════════
    VISION SECTION
    ═══════════════════════════════════════ */
-.vision { background: var(--bg); }
-.vision h2 { margin-bottom: 8px; }
-.vision .intro { color: var(--muted); font-weight: 300; margin-bottom: 36px; font-size: 0.95rem; }
+.vision { background: var(--organic); }
+.vision .section-label { color: var(--organic-mid); }
+.vision h2 { color: var(--organic-pale); margin-bottom: 8px; }
+.vision .intro { color: rgba(237,236,228,0.75); font-weight: 300; margin-bottom: 36px; font-size: 0.95rem; }
 .vision-cards { display: flex; flex-direction: column; gap: 16px; }
 .vision-card {
-  background: var(--surface); border-radius: var(--radius-lg);
-  padding: 20px; border: 1px solid var(--border);
+  background: rgba(255,255,255,0.06); border-radius: var(--radius-lg);
+  padding: 20px; border: 1px solid rgba(255,255,255,0.08);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 @media(max-width: 480px) { .vision-card { padding: 16px; } }
-.vision-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(63,66,46,0.08); }
+.vision-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
 .vision-card .label {
   font-size: 0.72rem; font-weight: 500; text-transform: uppercase;
-  letter-spacing: 1.5px; color: var(--natural); margin-bottom: 8px;
+  letter-spacing: 1.5px; color: var(--apricot); margin-bottom: 8px;
 }
-.vision-card h3 { margin-bottom: 6px; font-size: 1rem; }
-.vision-card p { font-size: 0.84rem; color: var(--muted); font-weight: 300; line-height: 1.5; }
+.vision-card h3 { margin-bottom: 6px; font-size: 1rem; color: var(--organic-pale); }
+.vision-card p { font-size: 0.84rem; color: rgba(237,236,228,0.65); font-weight: 300; line-height: 1.5; }
 
 /* ═══════════════════════════════════════
    FEATURES
@@ -305,16 +306,16 @@ nav {
 /* ═══════════════════════════════════════
    HOW IT WORKS
    ═══════════════════════════════════════ */
-.how-it-works { background: var(--bg); }
+.how-it-works { background: #E5E6DC; }
 .how-it-works h2 { text-align: center; margin-bottom: 36px; }
 .steps { display: flex; flex-direction: column; gap: 24px; }
 .step { display: flex; gap: 16px; align-items: flex-start; }
 .step-num {
   width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0;
-  background: var(--apricot-pale); display: flex;
+  background: var(--organic); display: flex;
   align-items: center; justify-content: center;
   font-family: 'Fraunces', serif; font-weight: 700; font-size: 1rem;
-  color: var(--accent);
+  color: var(--organic-pale);
 }
 .step-text h3 { font-size: 1rem; margin-bottom: 4px; }
 .step-text p { font-size: 0.85rem; color: var(--muted); font-weight: 300; }
@@ -658,7 +659,7 @@ footer .copy { font-size: 0.7rem; color: var(--muted); margin-top: 20px; opacity
     <div class="reveal">
       <p class="section-label">Early access</p>
       <h2>Be one of the first 10 clinics<br>to use <span class="italic" style="color:var(--apricot);">Mia.</span></h2>
-      <p class="body-text">Mia is in active development. We're looking for real clinics to trial it and tell us what's missing. No polish &mdash; just a working product and a team that's listening.</p>
+      <p class="body-text">Mia is in active development, with AI-powered features on the roadmap. We're looking for real clinics to trial it and tell us what's missing. No polish &mdash; just a working product and a team that's building the future of veterinary care.</p>
     </div>
     <ul class="perk-list reveal">
       <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Personal demo and unrestricted access to every module for 2 weeks</li>
