@@ -18,7 +18,7 @@
   --ivory: #EDE6D6;
   --organic: #3F422E;
   --apricot: #D78B30;
-  --natural: #9F886F;
+  --natural: #7A6B58;
 
   /* Derived — ivory family */
   --ivory-light: #F5F0E6;
@@ -117,9 +117,10 @@ section { padding: 56px 0; }
    ═══════════════════════════════════════ */
 .urgency-banner {
   position: fixed; top: 0; left: 0; right: 0; z-index: 110;
-  background: var(--organic); text-align: center;
-  padding: 8px 16px; font-size: 0.78rem; font-weight: 400;
-  color: var(--organic-pale); letter-spacing: 0.2px;
+  background: var(--ivory-warm); text-align: center;
+  padding: 8px 16px; font-size: 0.78rem; font-weight: 500;
+  color: var(--organic); letter-spacing: 0.2px;
+  border-bottom: 1px solid var(--border);
 }
 
 /* ═══════════════════════════════════════
@@ -159,10 +160,10 @@ nav {
   margin-top: 14px; font-size: 0.82rem; color: var(--muted); font-weight: 300;
 }
 .btn-whatsapp {
-  background: #25D366; color: #fff; font-size: 1rem; font-weight: 500;
+  background: var(--organic); color: var(--organic-pale); font-size: 1rem; font-weight: 500;
   padding: 16px 32px; width: 100%; max-width: 400px; justify-content: center;
 }
-.btn-whatsapp:hover { background: #1EB854; }
+.btn-whatsapp:hover { background: var(--organic-light); }
 .hero .secondary-link {
   display: inline-block; margin-top: 16px; font-size: 0.85rem;
   color: var(--muted); text-decoration: none; font-weight: 400;
@@ -182,17 +183,8 @@ nav {
 }
 @media(max-width: 480px) { .showcase-section { padding: 40px 0 36px; } }
 @media(max-width: 768px) {
-  .showcase-tabs { display: none !important; }
-  .showcase-dots { display: none !important; }
-  .screenshot-slide { display: none !important; }
-  .screenshot-slide[data-slide="0"] { display: flex !important; }
-  .showcase-mobile-link {
-    display: block; text-align: center; margin-top: 16px;
-    font-size: 0.85rem; color: var(--accent); text-decoration: none;
-    font-weight: 400;
-  }
+  .showcase-mobile-link { display: none; }
 }
-@media(min-width: 769px) { .showcase-mobile-link { display: none; } }
 .showcase-section .section-label { color: var(--natural); text-align: center; }
 .showcase-section h2 { color: var(--ink); text-align: center; margin-bottom: 32px; padding: 0 20px; }
 
@@ -509,7 +501,7 @@ footer .copy { font-size: 0.7rem; color: var(--muted); margin-top: 20px; opacity
       </svg>
       <span>Mia</span>
     </a>
-    <a href="https://wa.me/914132752191?text=Hey+Team+Mia%2C+I+am+reaching+out+as+I+am+interested+in+learning+more+about+your+product+and+scheduling+a+call." class="nav-cta" target="_blank" rel="noopener" style="text-decoration:none;">Join trial
+    <a href="https://wa.me/14132752191?text=Hey+Team+Mia%2C+I+am+reaching+out+as+I+am+interested+in+learning+more+about+your+product+and+scheduling+a+call." class="nav-cta" target="_blank" rel="noopener" style="text-decoration:none;">Join trial
       <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
@@ -519,9 +511,9 @@ footer .copy { font-size: 0.7rem; color: var(--muted); margin-top: 20px; opacity
 <section class="hero">
   <div class="container">
     <div class="reveal">
-      <h1>Your clinic deserves better<br><span class="italic accent">than paper and WhatsApp.</span></h1>
+      <h1>Your clinic,<br><span class="italic accent">modernized.</span></h1>
       <p class="sub">One platform for appointments, records, billing, and inventory. Built for Indian clinics.</p>
-      <a href="https://wa.me/914132752191?text=Hey+Team+Mia%2C+I+am+reaching+out+as+I+am+interested+in+learning+more+about+your+product+and+scheduling+a+call." class="btn btn-whatsapp" target="_blank" rel="noopener">&#x1F4AC;&ensp;Claim Your Free Trial on WhatsApp</a>
+      <a href="https://wa.me/14132752191?text=Hey+Team+Mia%2C+I+am+reaching+out+as+I+am+interested+in+learning+more+about+your+product+and+scheduling+a+call." class="btn btn-whatsapp" target="_blank" rel="noopener">&#x1F4AC;&ensp;Claim Your Free Trial on WhatsApp</a>
       <a href="#features" class="secondary-link">&rarr; See what's inside the product</a>
       <p class="social-proof">&#x1F43E;&ensp;Vets from Delhi, Pune, Hyderabad &amp; more are already in.</p>
     </div>
@@ -706,7 +698,7 @@ footer .copy { font-size: 0.7rem; color: var(--muted); margin-top: 20px; opacity
       <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Completely free &mdash; no strings attached</li>
     </ul>
     <div class="reveal">
-      <a href="https://wa.me/914132752191?text=Hey+Team+Mia%2C+I+am+reaching+out+as+I+am+interested+in+learning+more+about+your+product+and+scheduling+a+call." class="btn" target="_blank" rel="noopener" style="text-decoration:none;">&#x1F4AC;&ensp;Claim Your Spot on WhatsApp</a>
+      <a href="https://wa.me/14132752191?text=Hey+Team+Mia%2C+I+am+reaching+out+as+I+am+interested+in+learning+more+about+your+product+and+scheduling+a+call." class="btn" target="_blank" rel="noopener" style="text-decoration:none;">&#x1F4AC;&ensp;Claim Your Spot on WhatsApp</a>
     </div>
   </div>
 </section>
@@ -884,15 +876,12 @@ function goToSlide(index) {
 tabs.forEach(tab => tab.addEventListener('click', () => goToSlide(+tab.dataset.index)));
 dots.forEach(dot => dot.addEventListener('click', () => goToSlide(+dot.dataset.index)));
 
-// Auto-cycle every 5s, pause on interaction — skip on mobile
-let autoTimer = null;
-if (window.innerWidth > 768) {
-  autoTimer = setInterval(() => {
-    const current = document.querySelector('.screenshot-slide.active');
-    const idx = +current.dataset.slide;
-    goToSlide((idx + 1) % slides.length);
-  }, 5000);
-}
+// Auto-cycle every 5s, pause on interaction
+let autoTimer = setInterval(() => {
+  const current = document.querySelector('.screenshot-slide.active');
+  const idx = +current.dataset.slide;
+  goToSlide((idx + 1) % slides.length);
+}, 5000);
 
 function pauseAuto() { clearInterval(autoTimer); }
 document.querySelector('.showcase-section').addEventListener('click', pauseAuto);
